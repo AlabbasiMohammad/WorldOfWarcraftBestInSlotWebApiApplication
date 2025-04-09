@@ -11,6 +11,7 @@ namespace WorldOfWarcraftBestInSlotWebApiApplication.Models
         public string? WeaponId { get; set; }
         public string? ArmorId { get; set; }
         public string? AccessoryId { get; set; }
+        public string? test { get; set; }
 
     }
 }
