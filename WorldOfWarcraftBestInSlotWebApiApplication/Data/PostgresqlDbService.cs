@@ -48,6 +48,19 @@ namespace WorldOfWarcraftBestInSlotWebApiApplication.Data
                     .WithOne(m => m.Item)
                     .HasForeignKey<Monster>(m => m.ItemId)
                     .OnDelete(DeleteBehavior.Restrict);
+
+
+
+                // // seed Items
+                // entity.HasData(new Item
+                // {
+                //     Id = 1,
+                //     Name = "Ashbringer Sword",
+                //     // CategoryId = 1,
+                //     Agility = 5,
+                //     Strength = 10,
+                //     Stamina = 2
+                // });
                     
 
             });

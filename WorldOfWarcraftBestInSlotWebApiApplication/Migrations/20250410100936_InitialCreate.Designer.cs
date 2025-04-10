@@ -11,7 +11,7 @@ using WorldOfWarcraftBestInSlotWebApiApplication.Data;
 namespace WorldOfWarcraftBestInSlotWebApiApplication.Migrations
 {
     [DbContext(typeof(PostgresqlDbService))]
-    [Migration("20250410072851_InitialCreate")]
+    [Migration("20250410100936_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

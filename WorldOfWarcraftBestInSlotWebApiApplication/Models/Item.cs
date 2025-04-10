@@ -16,15 +16,14 @@
         public int Strength { get; set; }
         public int Stamina { get; set; }
         public int CategoryId { get; set; }
-        public virtual ItemCategory Category { get; set; } = new ItemCategory();
+        public virtual ItemCategory Category { get; set; }
 
         public int CharacterId { get; set; }
-        public virtual Character Character { get; set; } = new Character();
+        public virtual Character Character { get; set; }
 
 
         public int MonsterId { get; set; }
-        public virtual Monster Monster { get; set; } = new Monster();
-        // ToDo : add item drop chance
+        public virtual Monster Monster { get; set; }
         
     }
 }
