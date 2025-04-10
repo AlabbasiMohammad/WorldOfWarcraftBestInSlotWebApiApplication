@@ -8,10 +8,8 @@ namespace WorldOfWarcraftBestInSlotWebApiApplication.Models
         [BsonRepresentation(MongoDB.Bson.BsonType.ObjectId)]
         public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
-        public string? WeaponId { get; set; }
-        public string? ArmorId { get; set; }
-        public string? AccessoryId { get; set; }
-        public string? test { get; set; }
+
+        public virtual ICollection<Item> Items { get; set; } = new List<Item>();
 
     }
 }

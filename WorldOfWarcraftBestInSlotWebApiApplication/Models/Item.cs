@@ -6,10 +6,6 @@
         Armor,
         Weapon,
         Accessory
-        // Trinket,
-        //Ring,
-        // Cloak,
-        //Other
     }
 
     public class Item
