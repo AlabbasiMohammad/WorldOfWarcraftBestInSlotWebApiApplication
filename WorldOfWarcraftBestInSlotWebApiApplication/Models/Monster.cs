@@ -10,6 +10,7 @@ namespace WorldOfWarcraftBestInSlotWebApiApplication.Models
         public string Name { get; set; } = string.Empty;
         public decimal DropItemChance { get; set; }
 
+        public int ItemId { get; set; }
         public virtual Item Item { get; set; } = new Item();
     }
 }
