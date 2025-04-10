@@ -1,12 +1,17 @@
+using Microsoft.EntityFrameworkCore;
 using WorldOfWarcraftBestInSlotWebApiApplication.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.Configure<MongoDbSettings>(
-    builder.Configuration.GetSection("MongoDbSettings"));
-builder.Services.AddSingleton<ApplicationMongoDbContext>();
+// builder.Services.Configure<MongoDbSettings>(
+//     builder.Configuration.GetSection("MongoDbSettings"));
+// builder.Services.AddSingleton<ApplicationMongoDbContext>();
+
+builder.Services.AddEntityFrameworkNpgsql()
+    .AddDbContext<PostgresqlDbService>(options =>
+        options.UseNpgsql(builder.Configuration.GetConnectionString("PostgresqlDbConnection")));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
